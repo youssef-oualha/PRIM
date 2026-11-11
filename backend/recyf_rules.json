@@ -1,0 +1,34 @@
+{
+  "framework": "ANSSI ReCyF (Référentiel Cyber France) / EU NIS2 Directive",
+  "version": "2026.1",
+  "organization": "AIDATACY Security Engine",
+  "objectives": [
+    {
+      "objective_id": 10,
+      "code": "RECYF-OBJ-10.2",
+      "nis2_mapping": "Article 21(2)(j) - Multi-Factor Authentication & Continuous Authentication",
+      "title": "Identity & Access Management (IAM) — Privileged MFA Enforcement",
+      "requirement": "All privileged (admin) accounts must have Multi-Factor Authentication (MFA) actively enforced.",
+      "criticality": "CRITICAL",
+      "weight": 40,
+      "max_score": 100,
+      "evaluation_logic": {
+        "target_collection": "users",
+        "scope_filter": {
+          "field": "role",
+          "operator": "EQUALS",
+          "value": "admin"
+        },
+        "assertion": {
+          "field": "mfa_enabled",
+          "operator": "EQUALS",
+          "value": true
+        }
+      },
+      "remediation": {
+        "compliant": "Objective 10 satisfied. Maintain continuous monitoring of privileged sessions via AIDATACY Access Gateway.",
+        "non_compliant": "Enforce hardware-backed or FIDO2 MFA for the {failed_count} identified non-compliant admin account(s) immediately using AIDATACY Access Gateway and revoke active legacy tokens."
+      }
+    }
+  ]
+}

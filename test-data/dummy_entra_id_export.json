@@ -1,0 +1,64 @@
+{
+  "export_metadata": {
+    "source": "Microsoft Entra ID (Azure AD)",
+    "tenant_id": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+    "domain": "corp.client-sovereign.fr",
+    "export_timestamp": "2026-11-10T18:30:00Z"
+  },
+  "users": [
+    {
+      "id": "usr-001",
+      "username": "jean.dupont@corp.client-sovereign.fr",
+      "display_name": "Jean Dupont",
+      "role": "admin",
+      "mfa_enabled": true,
+      "mfa_methods": ["FIDO2_SecurityKey", "MicrosoftAuthenticator"],
+      "last_login": "2026-11-10T08:14:22Z"
+    },
+    {
+      "id": "usr-002",
+      "username": "marc.lefebvre@corp.client-sovereign.fr",
+      "display_name": "Marc Lefebvre (Legacy Domain Admin)",
+      "role": "admin",
+      "mfa_enabled": false,
+      "mfa_methods": [],
+      "last_login": "2026-11-09T23:41:10Z"
+    },
+    {
+      "id": "usr-003",
+      "username": "claire.moreau@corp.client-sovereign.fr",
+      "display_name": "Claire Moreau",
+      "role": "user",
+      "mfa_enabled": true,
+      "mfa_methods": ["MicrosoftAuthenticator"],
+      "last_login": "2026-11-10T09:05:00Z"
+    },
+    {
+      "id": "usr-004",
+      "username": "thomas.bernard@corp.client-sovereign.fr",
+      "display_name": "Thomas Bernard",
+      "role": "user",
+      "mfa_enabled": false,
+      "mfa_methods": [],
+      "last_login": "2026-11-08T14:12:49Z"
+    },
+    {
+      "id": "usr-005",
+      "username": "svc-backup-admin@corp.client-sovereign.fr",
+      "display_name": "Breakglass & Backup Admin",
+      "role": "admin",
+      "mfa_enabled": false,
+      "mfa_methods": [],
+      "last_login": "2026-11-01T03:00:00Z"
+    },
+    {
+      "id": "usr-006",
+      "username": "sophie.laurent@corp.client-sovereign.fr",
+      "display_name": "Sophie Laurent",
+      "role": "admin",
+      "mfa_enabled": true,
+      "mfa_methods": ["FIDO2_SecurityKey"],
+      "last_login": "2026-11-10T10:20:11Z"
+    }
+  ]
+}
